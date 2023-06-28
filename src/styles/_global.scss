@@ -12,7 +12,13 @@ html {
   height: 100%;
 }
 
-body,
+body {
+  min-height: 100%;
+}
+#root {
+  height: 100vh;
+}
+
 div,
 span,
 object,
@@ -125,26 +131,40 @@ input {
 }
 
 .navbar {
-  grid-area: header;
+  grid-area: navbar;
   background-color: green;
 }
 
 .main {
-  grid-area: header;
+  grid-area: main;
   background-color: pink;
 }
 
 .footer {
-  grid-area: header;
+  grid-area: footer;
   background-color: blue;
 }
 
 .grid-container {
   display: grid;
   gap: 10px;
+  grid-template-rows: 100px 100px auto 100px;
   grid-template-areas:
     "header"
     "navbar"
     "main"
     "footer";
+  height: 100vh;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas:
+      "header header"
+      "navbar main"
+      "footer footer";
+    height: 100vh;
+  }
 }
