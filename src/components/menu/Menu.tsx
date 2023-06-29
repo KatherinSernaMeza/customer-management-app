@@ -1,5 +1,3 @@
-import React from "react";
-
 const Menu = (props: any) => {
   return (
     <nav className="navbar">
