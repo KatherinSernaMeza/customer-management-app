@@ -1,0 +1,42 @@
+menu {
+  img {
+    padding-right: 50px;
+    padding-bottom: 0px;
+  }
+  ul {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+  }
+  ul > * {
+    padding: 10px;
+  }
+  ul > .title-items {
+    margin-left: -40px;
+    color: map-get($colorText, "tertiary");
+    font-weight: normal;
+  }
+  li:hover {
+    color: map-get($colorText, "secondary");
+    transform: translate(5px, 0px);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.menu-device {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .items {
+    text-align: center;
+    img {
+      padding: 0px;
+    }
+  }
+}

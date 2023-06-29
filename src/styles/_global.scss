@@ -36,7 +36,6 @@ pre,
 a,
 code,
 em,
-img,
 small,
 strike,
 strong,
@@ -90,6 +89,7 @@ main {
 body {
   line-height: 1;
   min-height: 100%;
+  margin: 0px;
 }
 
 ol,
@@ -119,52 +119,67 @@ input {
   -webkit-appearance: none;
   border-radius: 0;
 }
+menu {
+  padding: 0px;
+}
 
-.grid-container > * {
-  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 4px;
+img {
+  padding: 20px;
 }
 
 .header {
   grid-area: header;
-  background-color: red;
+  background-color: map-get($background, "primary");
 }
 
 .navbar {
   grid-area: navbar;
-  background-color: green;
+  background-color: map-get($background, "secondary");
 }
 
 .main {
   grid-area: main;
-  background-color: pink;
+  background-color: map-get($background, "primary");
 }
 
 .footer {
   grid-area: footer;
-  background-color: blue;
+  background-color: map-get($background, "primary");
 }
-
-.grid-container {
-  display: grid;
-  gap: 10px;
-  grid-template-rows: 100px 100px auto 100px;
-  grid-template-areas:
-    "header"
-    "navbar"
-    "main"
-    "footer";
-  height: 100vh;
-}
-
-@include media-up(md) {
+@include media-up-mobile(sm) {
   .grid-container {
-    grid-template-columns: 200px auto;
-    grid-template-rows: 100px auto 100px;
+    display: grid;
+    grid-template-rows: 50px 400px auto 50px;
     grid-template-areas:
-      "header header"
-      "navbar main"
-      "footer footer";
+      "header"
+      "navbar"
+      "main"
+      "footer";
     height: 100vh;
+    .Nav {
+      display: none;
+    }
+    .NavDevice {
+      display: block;
+    }
+  }
+}
+
+@include media-up(sm) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+      "navbar header header"
+      "navbar main main"
+      "navbar footer footer";
+    height: 100vh;
+  }
+  .Nav {
+    display: block;
+  }
+  .NavDevice {
+    display: none;
   }
 }
