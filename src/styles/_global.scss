@@ -163,6 +163,13 @@ img {
       display: block;
     }
   }
+
+  .mobile-menu-open {
+    grid-template-rows: 50px 400px auto 50px;
+  }
+  .mobile-menu-close {
+    grid-template-rows: 50px 100px auto 50px;
+  }
 }
 
 @include media-up(sm) {
