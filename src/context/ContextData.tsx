@@ -9,9 +9,9 @@ const ContextData: FC<Props> = ({ children }) => {
 
   const updateShowMenu = (showMenu: boolean) => {
     if (showMenu) {
-      setShowMenu(true);
-    } else {
       setShowMenu(false);
+    } else {
+      setShowMenu(true);
     }
   };
   return (

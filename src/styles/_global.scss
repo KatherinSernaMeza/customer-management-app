@@ -135,6 +135,8 @@ img {
 .navbar {
   grid-area: navbar;
   background-color: map-get($background, "secondary");
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .main {
@@ -149,7 +151,7 @@ img {
 @include media-up-mobile(sm) {
   .grid-container {
     display: grid;
-    grid-template-rows: 50px 400px auto 50px;
+    /* grid-template-rows: 50px 400px auto 50px;*/
     grid-template-areas:
       "header"
       "navbar"
@@ -166,9 +168,11 @@ img {
 
   .mobile-menu-open {
     grid-template-rows: 50px 400px auto 50px;
+    transition: 0.3s ease-in-out;
   }
   .mobile-menu-close {
-    grid-template-rows: 50px 100px auto 50px;
+    grid-template-rows: 50px 80px auto 50px;
+    transition: 0.3s ease-in-out;
   }
 }
 

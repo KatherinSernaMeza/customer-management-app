@@ -1,18 +1,16 @@
-import { ReactNode, useContext } from "react";
-import { useState } from "react";
+import { useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import { FaWindowClose } from "react-icons/fa";
-
+import { TodoContext } from "../../context/ContextData";
 import { MenuContextType } from "../../@Types/MenuContextType";
-import ContextData from "../../context/ContextData";
 
 const NavDevice = () => {
-  const [display, setDisplay] = useState(false);
-  const { updateShowMenu } = useContext(ContextData);
+  const { updateShowMenu, showMenu } = useContext(
+    TodoContext
+  ) as MenuContextType;
 
   const displayMenu = () => {
-    console.log("si entro");
-    updateShowMenu();
+    updateShowMenu(showMenu);
   };
   return (
     <>
@@ -23,7 +21,7 @@ const NavDevice = () => {
             className="menuIcon"
             size={25}
             style={
-              display
+              showMenu
                 ? {
                     display: "none",
                   }
@@ -35,7 +33,7 @@ const NavDevice = () => {
             className="menuIcon"
             size={25}
             style={
-              display
+              showMenu
                 ? {
                     display: "block",
                   }
