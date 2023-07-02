@@ -1,7 +1,8 @@
+import logoCompany from "../../../public/logo-company.jpg";
 const Nav = () => {
   return (
     <>
-      <img width="100%" src="../../../public/logo-company.jpg" />
+      <img width="100%" src={logoCompany} />
 
       <ul>
         <li className="title-items">Main Menu</li>

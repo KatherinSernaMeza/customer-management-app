@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { FaWindowClose } from "react-icons/fa";
 import { TodoContext } from "../../context/ContextData";
 import { MenuContextType } from "../../@Types/MenuContextType";
+import logoCompany from "../../../public/logo-company.jpg";
 
 const NavDevice = () => {
   const { updateShowMenu, showMenu } = useContext(
@@ -43,7 +44,7 @@ const NavDevice = () => {
           />
         </div>
         <div className="items">
-          <img width="40%" src="../../../public/logo-company.jpg" />
+          <img width="40%" src={logoCompany} />
           <ul>
             <li className="title-items">Main Menu</li>
             <li>Dashboard</li>
