@@ -4,6 +4,7 @@ import { FaWindowClose } from "react-icons/fa";
 import { TodoContext } from "../../context/ContextData";
 import { MenuContextType } from "../../@Types/MenuContextType";
 import logoCompany from "../../../public/logo-company.jpg";
+import { Link } from "react-router-dom";
 
 const NavDevice = () => {
   const { updateShowMenu, showMenu } = useContext(
@@ -48,7 +49,9 @@ const NavDevice = () => {
           <ul>
             <li className="title-items">Main Menu</li>
             <li>Dashboard</li>
-            <li>Customers</li>
+            <li>
+              <Link to="customers">Customers </Link>
+            </li>
           </ul>
         </div>
       </div>
