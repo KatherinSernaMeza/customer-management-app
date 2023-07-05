@@ -71,7 +71,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font: revert;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -140,6 +140,7 @@ img {
 }
 
 .main {
+  padding: 30px;
   grid-area: main;
   background-color: map-get($background, "primary");
 }
@@ -151,7 +152,7 @@ img {
 @include media-up-mobile(sm) {
   .grid-container {
     display: grid;
-    /* grid-template-rows: 50px 400px auto 50px;*/
+
     grid-template-areas:
       "header"
       "navbar"
