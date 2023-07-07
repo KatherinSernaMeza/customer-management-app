@@ -1,6 +1,13 @@
+import Button from "../general/Button";
+import Search from "../general/Search";
+
 const ListCustomers = () => {
   return (
     <>
+      <div className="display-between">
+        <Button />
+        <Search />
+      </div>
       <table>
         <thead>
           <tr>

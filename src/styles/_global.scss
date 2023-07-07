@@ -149,6 +149,34 @@ img {
   grid-area: footer;
   background-color: map-get($background, "primary");
 }
+.input {
+  color: map-get($colorText, "white");
+  border-radius: 5px;
+  height: 46px;
+  font-size: 16px;
+}
+.search-container {
+  width: 80%;
+  border: 3px solid #f1eeee;
+}
+.search {
+  font-size: 16px;
+  width: 96%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.display-between {
+  display: flex;
+  justify-content: space-between;
+}
+.display-align-center {
+  display: flex;
+  align-items: center;
+}
+
 @include media-up-mobile(sm) {
   .grid-container {
     display: grid;

@@ -1,0 +1,10 @@
+.button-purple {
+  background: map-get($colorComponents, "primary");
+  width: 15%;
+  border: none;
+  min-width: 235px;
+  margin-right: 10px;
+}
+.faplus {
+  margin-right: 10px;
+}
