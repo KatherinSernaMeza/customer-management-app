@@ -1,0 +1,84 @@
+{
+  "customers": [
+    {
+      "firstName": "Christian",
+      "lastName": "Espinoza",
+      "birth": "12/3/98",
+      "phone": "6642736489",
+      "email": "ch.esp@gmail.com",
+      "bankAccountNumber": "83746293847615"
+    },
+    {
+      "firstName": "Samara",
+      "lastName": "Boone",
+      "birth": "07/04/87",
+      "phone": "6649384756",
+      "email": "samara.b@outlook.com",
+      "bankAccountNumber": "8372639487162"
+    },
+    {
+      "firstName": "Fraser",
+      "lastName": "Arias",
+      "birth": "18/08/90",
+      "phone": "664837479",
+      "email": "f.arias@live.com",
+      "bankAccountNumber": "92837462938765"
+    },
+    {
+      "firstName": "Zara",
+      "lastName": "Blaese",
+      "birth": "12/09/67",
+      "phone": "6648374092",
+      "email": "contact@zarablaese.info",
+      "bankAccountNumber": "72638472635419"
+    },
+    {
+      "firstName": "Sidney",
+      "lastName": "Camacho",
+      "birth": "16/08/02",
+      "phone": "6649384726",
+      "email": "s.camacho2022@gmail.com",
+      "bankAccountNumber": "89374628394876"
+    },
+    {
+      "firstName": "Kiana",
+      "lastName": "Blackburn",
+      "birth": "19/03/95",
+      "phone": "6649283082",
+      "email": "blackburn@kiana.com",
+      "bankAccountNumber": "83746283746152"
+    },
+    {
+      "firstName": "Tyrone",
+      "lastName": "Odom",
+      "birth": "19/03/65",
+      "phone": "6649283948",
+      "email": "ty.od@live.com",
+      "bankAccountNumber": "83746352837462"
+    },
+    {
+      "firstName": "Manson",
+      "lastName": "Roth",
+      "birth": "08/05/65",
+      "phone": "6649384893",
+      "email": "manson.roth@live.com",
+      "bankAccountNumber": "84736405982736"
+    },
+    {
+      "firstName": "Abigail",
+      "lastName": "Boyle",
+      "birth": "27/10/85",
+      "phone": "6649382739",
+      "email": "abigail.boyle@gmail.com",
+      "bankAccountNumber": "82736253847927"
+    },
+    {
+      "firstName": "Rajan",
+      "lastName": "Rasmussen",
+      "birth": "23/04/72",
+      "phone": "6648374625",
+      "email": "rajan.em72@gmail.com",
+      "bankAccountNumber": "73625384762537"
+    }
+  ]
+}
