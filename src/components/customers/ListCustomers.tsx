@@ -3,20 +3,23 @@ import Button from "../general/Button";
 import Search from "../general/Search";
 import { CostumersAPI } from "../../api/services/customers";
 //const { API_URL } = process.env;
-/*const baseUrl =
-  process.env.API_URL !== "production"
-    ? "https://customer-management-app-k7u2.vercel.app/"
-    : "http://localhost:3000/customers";
-*/
+
 const ListCustomers = () => {
   const [customers, setCustomers] = useState([]);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const customers = async () => {
-      const response = await CostumersAPI.get(
-        import.meta.env.VITE_API_URL_PRODUCTION
-      );
-      setCustomers(response);
+      setError(false);
+      setLoading(true);
+      try {
+        const response = await CostumersAPI.get(import.meta.env.VITE_API_URL);
+        setCustomers(response["users"]);
+      } catch (error) {
+        setError(false);
+      }
+      setLoading(true);
     };
     customers();
   }, []);
@@ -32,10 +35,15 @@ const ListCustomers = () => {
           <tr>
             <th>FirstName</th>
             <th>LastName</th>
-            <th>Birth</th>
-            <th>phone</th>
-            <th>email</th>
-            <th>bankAccountNumber</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>BirthDate</th>
+            <th>Image</th>
+            <th>Bank</th>
           </tr>
         </thead>
         <tbody>
@@ -43,10 +51,15 @@ const ListCustomers = () => {
             <tr key={customer["id"]}>
               <td>{customer["firstName"]}</td>
               <td>{customer["lastName"]}</td>
-              <td>{customer["birth"]}</td>
-              <td>{customer["phone"]}</td>
+              <td>{customer["age"]}</td>
+              <td>{customer["gender"]}</td>
               <td>{customer["email"]}</td>
-              <td>{customer["bankAccountNumber"]}</td>
+              <td>{customer["phone"]}</td>
+              <td>{customer["username"]}</td>
+              <td>{customer["password"]}</td>
+              <td>{customer["birthDate"]}</td>
+              <td>{customer["image"]}</td>
+              <td>{customer["bank"].cardNumber}</td>
             </tr>
           ))}
         </tbody>

@@ -8,6 +8,3 @@ export const CostumersAPI = {
     return response.data;
   },
 };
-
-// defining the cancel API object for ProductAPI
-// const cancelApiObject = defineCancelApiObject(ProductAPI);
