@@ -17,9 +17,9 @@ const ListCustomers = () => {
         const response = await CostumersAPI.get(import.meta.env.VITE_API_URL);
         setCustomers(response["users"]);
       } catch (error) {
-        setError(false);
+        setError(true);
       }
-      setLoading(true);
+      setLoading(false);
     };
     customers();
   }, []);
@@ -30,40 +30,43 @@ const ListCustomers = () => {
         <Button />
         <Search />
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Username</th>
-            <th>Password</th>
-            <th>BirthDate</th>
-            <th>Image</th>
-            <th>Bank</th>
-          </tr>
-        </thead>
-        <tbody>
-          {customers.map((customer) => (
-            <tr key={customer["id"]}>
-              <td>{customer["firstName"]}</td>
-              <td>{customer["lastName"]}</td>
-              <td>{customer["age"]}</td>
-              <td>{customer["gender"]}</td>
-              <td>{customer["email"]}</td>
-              <td>{customer["phone"]}</td>
-              <td>{customer["username"]}</td>
-              <td>{customer["password"]}</td>
-              <td>{customer["birthDate"]}</td>
-              <td>{customer["image"]}</td>
-              <td>{customer["bank"].cardNumber}</td>
+      {loading ? (
+        <h1> its loading... </h1>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>BirthDate</th>
+              <th>Image</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {customers.map((customer) => (
+              <tr key={customer["id"]}>
+                <td>{customer["firstName"]}</td>
+                <td>{customer["lastName"]}</td>
+                <td>{customer["age"]}</td>
+                <td>{customer["gender"]}</td>
+                <td>{customer["email"]}</td>
+                <td>{customer["phone"]}</td>
+                <td>{customer["username"]}</td>
+                <td>{customer["password"]}</td>
+                <td>{customer["birthDate"]}</td>
+                <td>{customer["image"]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+      {error ? "its error..." : ""}
     </>
   );
 };
