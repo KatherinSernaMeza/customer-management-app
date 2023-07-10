@@ -18,6 +18,8 @@ const ListCustomers = () => {
         setCustomers(response["users"]);
       } catch (error) {
         setError(true);
+        console.error(error);
+        console.log(error);
       }
       setLoading(false);
     };
