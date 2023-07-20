@@ -141,6 +141,7 @@ img {
 
 .main {
   padding: 30px;
+  overflow: hidden;
   grid-area: main;
   background-color: map-get($background, "primary");
 }
