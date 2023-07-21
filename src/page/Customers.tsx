@@ -7,8 +7,8 @@ const Customers = () => {
   return (
     <div className="pageCustomers">
       <h1>Customers</h1>
-      <div className="container">
-        <div className="display-between multimedia-customer">
+      <div className="container grid-customers">
+        <div className="display-between multimedia-customer multimediaCustomers">
           <Button />
           <Search />
         </div>
@@ -16,6 +16,7 @@ const Customers = () => {
           listCustomers={<ListCustomers />}
           customersDevice={<CustomersDevice />}
         />
+        <div className="paginationCustomers"> La paginacion</div>
       </div>
     </div>
   );
