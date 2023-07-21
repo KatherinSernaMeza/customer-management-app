@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import Button from "../general/Button";
-import Search from "../general/Search";
 import { CostumersAPI } from "../../api/services/customers";
 //const { API_URL } = process.env;
 
@@ -28,10 +26,6 @@ const ListCustomers = () => {
 
   return (
     <>
-      <div className="display-between">
-        <Button />
-        <Search />
-      </div>
       {loading ? (
         <h1> its loading... </h1>
       ) : (

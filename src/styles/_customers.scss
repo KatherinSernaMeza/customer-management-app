@@ -1,10 +1,25 @@
-.customerContainer {
+.pageCustomers {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.multimedia-customer {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.container {
   background-color: white;
-  overflow: scroll;
-  height: 80vh;
   border-radius: 10px;
-  margin-top: 25px;
+  height: inherit;
   padding: 15px;
+}
+.customerContainer {
+  overflow: scroll;
+  height: inherit;
+  height: 97%;
 }
 
 table {
