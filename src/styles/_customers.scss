@@ -1,5 +1,4 @@
 .pageCustomers {
-  height: 100%;
   padding: 10px;
 }
 
@@ -23,6 +22,7 @@ table {
   width: 100%;
   font-size: 20px;
   margin-top: 15px;
+  margin-bottom: 15px;
   border-collapse: inherit;
 }
 th,
@@ -33,6 +33,22 @@ td {
   vertical-align: bottom;
   border: 2px solid;
   border-color: map-get($background, "primary");
+}
+
+.id-table {
+  text-align: center;
+  min-width: 50px !important;
+}
+.tool-table {
+  text-align: center;
+  min-width: 100px !important;
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0px;
+  background: white;
+  box-shadow: -7px 1px 18px -7px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: -7px 1px 18px -7px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: -7px 1px 18px -7px rgba(0, 0, 0, 0.53);
 }
 
 @include media-up-mobile(sm) {

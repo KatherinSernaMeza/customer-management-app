@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { CostumersAPI } from "../../api/services/customers";
+import { FaEdit } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
+
 //const { API_URL } = process.env;
 
 const ListCustomers = () => {
@@ -32,6 +35,7 @@ const ListCustomers = () => {
         <table>
           <thead>
             <tr>
+              <th className="id-table">N°</th>
               <th>FirstName</th>
               <th>LastName</th>
               <th>Age</th>
@@ -42,22 +46,35 @@ const ListCustomers = () => {
               <th>Password</th>
               <th>BirthDate</th>
               <th>Image</th>
+              <th className="tool-table"></th>
             </tr>
           </thead>
           <tbody>
             {customers.map((customer) => (
-              <tr key={customer["id"]}>
-                <td>{customer["firstName"]}</td>
-                <td>{customer["lastName"]}</td>
-                <td>{customer["age"]}</td>
-                <td>{customer["gender"]}</td>
-                <td>{customer["email"]}</td>
-                <td>{customer["phone"]}</td>
-                <td>{customer["username"]}</td>
-                <td>{customer["password"]}</td>
-                <td>{customer["birthDate"]}</td>
-                <td>{customer["image"]}</td>
-              </tr>
+              <>
+                {customer["id"] <= 10 ? (
+                  <tr key={customer["id"]}>
+                    <td className="id-table">{customer["id"]}</td>
+                    <td>{customer["firstName"]}</td>
+                    <td>{customer["lastName"]}</td>
+                    <td>{customer["age"]}</td>
+                    <td>{customer["gender"]}</td>
+                    <td>{customer["email"]}</td>
+                    <td>{customer["phone"]}</td>
+                    <td>{customer["username"]}</td>
+                    <td>{customer["password"]}</td>
+                    <td>{customer["birthDate"]}</td>
+                    <td>{customer["image"]}</td>
+                    <td className="tool-table">
+                      {" "}
+                      <FaEdit size={15} className="faplus" />
+                      <FaTrash size={15} className="faplus" />
+                    </td>
+                  </tr>
+                ) : (
+                  ""
+                )}
+              </>
             ))}
           </tbody>
         </table>
