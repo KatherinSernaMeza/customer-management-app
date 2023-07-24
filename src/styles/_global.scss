@@ -166,6 +166,11 @@ img {
   align-items: center;
 }
 
+.display-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
 @include media-up-mobile(sm) {
   .grid-container {
     display: grid;

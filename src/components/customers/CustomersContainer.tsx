@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Button from "../../components/general/Button";
 import Search from "../../components/general/Search";
+import Pagination from "../../components/general/Pagination";
 
 export type CustomersProps = {
   listCustomers: ReactNode;
@@ -18,7 +19,9 @@ const CustomersContainer = (props: CustomersProps) => {
         <div className="listCustomers">{props.listCustomers}</div>
         <div className="customersDevice">{props.customersDevice}</div>
       </div>
-      <div className="paginationCustomers"> La paginacion</div>
+      <div className="paginationCustomers">
+        <Pagination />
+      </div>
     </>
   );
 };
