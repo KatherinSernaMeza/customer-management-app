@@ -17,3 +17,9 @@
   border-radius: 10px;
   margin: 7px;
 }
+
+@include media-up-mobile(sm) {
+  .pagination {
+    display: none;
+  }
+}

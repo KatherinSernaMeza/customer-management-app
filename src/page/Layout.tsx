@@ -16,11 +16,13 @@ const Layout = () => {
   };
 
   return (
-    <div className={showMenu ? grid.openMobile : grid.closeMobile}>
-      <Header />
-      <Menu nav={<Nav />} navDevice={<NavDevice />} />
-      <Content />
-      <Footer />
+    <div>
+      <div className={showMenu ? grid.openMobile : grid.closeMobile}>
+        <Header />
+        <Menu nav={<Nav />} navDevice={<NavDevice />} />
+        <Content />
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,8 @@
-.search-container {
-  width: 80%;
-  border: 3px solid #f1eeee;
+.multimedia-customer {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
+
 .search {
   font-size: 16px;
   width: 96%;
@@ -13,4 +14,25 @@
 .icon-search {
   margin-right: 20px;
   color: black;
+}
+
+@include media-up(sm) {
+  .search-container {
+    width: 80%;
+    border: 3px solid #f1eeee;
+  }
+}
+
+@include media-up-mobile(sm) {
+  .column-customer {
+    flex-direction: column;
+  }
+  .width-element {
+    width: 100%;
+  }
+  .search-container {
+    width: 100%;
+    border: 3px solid #f1eeee;
+    margin-top: 15px;
+  }
 }

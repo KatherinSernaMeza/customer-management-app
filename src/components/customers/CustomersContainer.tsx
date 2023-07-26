@@ -11,7 +11,7 @@ export type CustomersProps = {
 const CustomersContainer = (props: CustomersProps) => {
   return (
     <>
-      <div className="display-between multimedia-customer multimediaCustomers">
+      <div className="display-between multimedia-customer column-customer">
         <Button />
         <Search />
       </div>

@@ -4,7 +4,7 @@ const Button = () => {
   return (
     <>
       <div>
-        <button className="input button-purple">
+        <button className="input button-purple width-element">
           <FaPlus size={13} className="faplus" />
           Create Customer
         </button>

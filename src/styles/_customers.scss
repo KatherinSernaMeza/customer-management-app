@@ -2,20 +2,12 @@
   padding: 10px;
 }
 
-.multimedia-customer {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 .container {
   background-color: white;
   border-radius: 10px;
   height: inherit;
   padding: 15px;
   overflow: hidden;
-}
-.tableCustomers {
-  overflow: scroll;
 }
 
 table {
@@ -51,12 +43,24 @@ td {
   -moz-box-shadow: -7px 1px 18px -7px rgba(0, 0, 0, 0.53);
 }
 
+.title {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
 @include media-up-mobile(sm) {
+  .title-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
   .listCustomers {
     display: none;
   }
   .customersDevice {
     display: block;
+    padding: 10px;
   }
 }
 
@@ -66,5 +70,8 @@ td {
   }
   .listCustomers {
     height: 100%;
+  }
+  .tableCustomers {
+    overflow: scroll;
   }
 }

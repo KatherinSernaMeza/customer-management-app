@@ -170,6 +170,9 @@ img {
   display: flex;
   justify-content: center;
 }
+.display-bottom {
+  align-items: flex-end;
+}
 
 @include media-up-mobile(sm) {
   .grid-container {
@@ -180,13 +183,15 @@ img {
       "navbar"
       "main"
       "footer";
-    height: 100vh;
     .Nav {
       display: none;
     }
     .NavDevice {
       display: block;
     }
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
   }
 
   .mobile-menu-open {
@@ -196,6 +201,12 @@ img {
   .mobile-menu-close {
     grid-template-rows: 50px 80px auto 50px;
     transition: 0.3s ease-in-out;
+  }
+  .main {
+    padding: 0px;
+    overflow-y: scroll;
+    grid-area: main;
+    background-color: map-get($background, "primary");
   }
 }
 
@@ -215,6 +226,12 @@ img {
   }
   .NavDevice {
     display: none;
+  }
+  .main {
+    padding: 30px;
+    overflow: hidden;
+    grid-area: main;
+    background-color: map-get($background, "primary");
   }
 }
 
