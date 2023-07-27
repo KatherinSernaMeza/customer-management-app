@@ -190,8 +190,7 @@ img {
       display: block;
     }
     overflow: hidden;
-    // height: calc(100vh - calc(100vh - 100%));
-    min-height: -webkit-fill-available;
+    height: 100dvh;
     width: 100vw;
   }
 
