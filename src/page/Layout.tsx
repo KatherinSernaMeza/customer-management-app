@@ -11,7 +11,8 @@ import { MenuContextType } from "../@Types/MenuContextType";
 const Layout = () => {
   const { showMenu } = useContext(TodoContext) as MenuContextType;
   const grid = {
-    openMobile: "grid-container mobile-menu-close",
+    openMobile:
+      "grid-container mobile-menu-close new-height-viewport-units new-width-viewport-units",
     closeMobile: "grid-container mobile-menu-open",
   };
 
