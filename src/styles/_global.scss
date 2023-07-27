@@ -135,8 +135,6 @@ img {
 .navbar {
   grid-area: navbar;
   background-color: map-get($background, "secondary");
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
 }
 
 .main {
@@ -195,12 +193,23 @@ img {
     width: 100vw;
   }
 
+  .toolSearchMobile {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+  .isVisibleToolSearchDesktop {
+    display: none;
+  }
+
   .mobile-menu-open {
-    grid-template-rows: 50px 400px auto 50px;
+    grid-template-rows: 0px 400px auto 0px;
     transition: 0.3s ease-in-out;
   }
   .mobile-menu-close {
-    grid-template-rows: 50px 80px auto 50px;
+    grid-template-rows: 0px 80px auto 0px;
     transition: 0.3s ease-in-out;
   }
   .main {
@@ -233,6 +242,9 @@ img {
     overflow: hidden;
     grid-area: main;
     background-color: map-get($background, "primary");
+  }
+  .isVisibleToolSearchMobile {
+    display: none;
   }
 }
 

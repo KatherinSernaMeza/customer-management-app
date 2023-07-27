@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-import Button from "../../components/general/Button";
-import Search from "../../components/general/Search";
 import Pagination from "../../components/general/Pagination";
+import ToolsSearch from "../../components/general/ToolsSearch";
 
 export type CustomersProps = {
   listCustomers: ReactNode;
@@ -11,9 +10,8 @@ export type CustomersProps = {
 const CustomersContainer = (props: CustomersProps) => {
   return (
     <>
-      <div className="display-between multimedia-customer column-customer">
-        <Button />
-        <Search />
+      <div className="isVisibleToolSearchDesktop">
+        <ToolsSearch />
       </div>
       <div className=" tableCustomers">
         <div className="listCustomers">{props.listCustomers}</div>
