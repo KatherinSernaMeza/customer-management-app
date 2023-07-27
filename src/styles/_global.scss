@@ -16,7 +16,7 @@ body {
   min-height: 100%;
 }
 #root {
-  height: 100vh;
+  // height: 100vh;
 }
 
 div,
@@ -190,27 +190,9 @@ img {
       display: block;
     }
     overflow: hidden;
-  }
 
-  .new-height-viewport-units {
-    height: 100vh;
     height: 100dvh;
-    height: 100svh;
-    height: 100lvh;
-    block-size: 100vb;
-    block-size: 100dvb;
-    block-size: 100svb;
-    block-size: 100lvb;
-  }
-  .new-width-viewport-units {
     width: 100vw;
-    width: 100dvw;
-    width: 100svw;
-    width: 1001vw;
-    inline-size: 100vi;
-    inline-size: 100dvi;
-    inline-size: 100svi;
-    inline-size: 100lvi;
   }
 
   .mobile-menu-open {
