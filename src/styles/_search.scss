@@ -16,10 +16,17 @@
   color: black;
 }
 
+.displaySearch {
+  display: none;
+}
+
 @include media-up(sm) {
   .search-container {
     width: 80%;
     border: 3px solid #f1eeee;
+  }
+  .icon-search-device {
+    display: none;
   }
 }
 
@@ -34,5 +41,19 @@
     width: 100%;
     border: 3px solid #f1eeee;
     margin-top: 15px;
+  }
+  .icon-search-device {
+    background: map-get($colorComponents, "primary");
+    color: map-get($colorText, "white");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 51%;
+    margin: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
