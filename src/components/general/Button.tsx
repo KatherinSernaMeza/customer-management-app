@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 //Libraries to get context values
 import { useContext } from "react";
